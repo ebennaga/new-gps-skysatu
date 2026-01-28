@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "leaflet/dist/leaflet.css";
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
 
 :root {
   --background: #ffffff;
@@ -156,4 +156,111 @@ body {
 .history-row {
   padding: 2px 0;
   border-bottom: 1px solid #eee;
+}
+
+.sidebar {
+  width: 300px;
+  background: white;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabs span {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tabs span.active {
+  background: #10b981;
+  color: white;
+}
+
+.date-picker {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.date-picker input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.date-picker button {
+  padding: 8px 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: #1e3a4c !important;
+  color: white !important;
+  padding: 8px 15px !important;
+}
+
+.company {
+  padding: 12px 15px;
+  font-weight: bold;
+}
+
+.manager-bumi {
+  background: #1e3a4c;
+  color: white;
+}
+
+.pt-bina {
+  background: #10b981;
+  color: white;
+}
+
+.vessel {
+  border-bottom: 1px solid #ddd;
+}
+
+.vessel label {
+  display: block;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.vessel input[type='checkbox'] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.history {
+  background: #f9f9f9;
+  max-height: 400px;
+  overflow-y: auto;
+  border-top: 1px solid #e0e0e0;
+}
+
+.history-row {
+  padding: 8px 15px 8px 45px;
+  cursor: pointer;
+  font-size: 13px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.history-row:hover {
+  background: #e8f5e9;
 }

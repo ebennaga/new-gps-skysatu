@@ -8,8 +8,8 @@ export type VesselPosition = {
 export type Vessel = {
   id: string;
   name: string;
-  lat: number;
-  lng: number;
+  lat: number | null;
+  lng: number | null;
   speed: number;
   heading: number;
 };
