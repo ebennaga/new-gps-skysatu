@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
-import { Vessel } from "@/data/vessel";
+import { Vessel } from "@/types/vessel";
 import { useState } from "react";
 
 // 🔥 INI KUNCINYA
