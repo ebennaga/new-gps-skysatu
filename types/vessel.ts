@@ -11,5 +11,5 @@ export type Vessel = {
   lat: number | null;
   lng: number | null;
   speed: number;
-  heading: number;
+  heading: number | undefined;
 };
