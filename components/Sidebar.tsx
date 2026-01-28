@@ -28,6 +28,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '0.1',
       lat: -1.2133,
       lng: 109.2251,
+      heading: 91.093,
     },
     {
       date: '05.01.2026',
@@ -35,6 +36,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '21.4',
       lat: -1.1401,
       lng: 109.2166,
+      heading: 359.093,
     },
     {
       date: '05.01.2026',
@@ -42,6 +44,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '21.8',
       lat: -0.9606,
       lng: 109.2116,
+      heading: 357.093,
     },
     {
       date: '05.01.2026',
@@ -49,6 +52,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '21.4',
       lat: -0.7777,
       lng: 109.2015,
+      heading: 1.093,
     },
     {
       date: '05.01.2026',
@@ -56,6 +60,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '17.1',
       lat: -0.6419,
       lng: 109.2643,
+      heading: 72.093,
     },
     {
       date: '05.01.2026',
@@ -63,6 +68,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '7.3',
       lat: -0.5358,
       lng: 109.3377,
+      heading: 4.093,
     },
     {
       date: '05.01.2026',
@@ -70,6 +76,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '25.2',
       lat: -0.448,
       lng: 109.3759,
+      heading: 60.093,
     },
     {
       date: '05.01.2026',
@@ -77,6 +84,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '8.4',
       lat: -0.3014,
       lng: 109.3836,
+      heading: 296.093,
     },
 
     {
@@ -85,6 +93,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '0.2',
       lat: -1.2133,
       lng: 109.2251,
+      heading: 0.0,
     },
     {
       date: '14.01.2026',
@@ -92,27 +101,31 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '0.1',
       lat: -1.2133,
       lng: 109.2251,
+      heading: 306.0,
     },
     {
       date: '14.01.2026',
       time: '11:09:58',
       speed: '16.6',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -1.1712,
+      lng: 109.229,
+      heading: 16.0,
     },
     {
       date: '14.01.2026',
       time: '11:39:55',
       speed: '25.5',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -0.9739,
+      lng: 109.2321,
+      heading: 359.0,
     },
     {
       date: '14.01.2026',
       time: '12:09:55',
       speed: '25.7',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -0.7585,
+      lng: 109.2188,
+      Heading: 357.0,
     },
     {
       date: '14.01.2026',
@@ -120,6 +133,7 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '30.9',
       lat: -1.2133,
       lng: 109.2251,
+      heading: 57.0,
     },
     {
       date: '14.01.2026',
@@ -127,34 +141,37 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
       speed: '7.2',
       lat: -1.2133,
       lng: 109.2251,
+      heading: 39.0,
     },
     {
       date: '14.01.2026',
       time: '13:39:54',
       speed: '5.1',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -0.4942,
+      lng: 109.3767,
     },
     {
       date: '14.01.2026',
       time: '14:09:55',
       speed: '4.0',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -0.4324,
+      lng: 109.3805,
+      heading: 316.0,
     },
     {
       date: '14.01.2026',
       time: '14:39:54',
       speed: '34.7',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -0.3271,
+      lng: 109.4213,
     },
     {
       date: '14.01.2026',
       time: '15:06:13',
       speed: '2.4',
-      lat: -1.2133,
-      lng: 109.2251,
+      lat: -0.2713,
+      lng: 109.3612,
+      heading: 31.0,
     },
     {
       date: '14.01.2026',

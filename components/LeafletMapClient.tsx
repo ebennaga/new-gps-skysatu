@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import { Vessel } from "@/data/vessel";
-import { useEffect } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { Vessel } from '@/data/vessel';
+import { useEffect } from 'react';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 // FIX marker icon
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "/leaflet/marker-icon-2x.png",
-  iconUrl: "/leaflet/marker-icon.png",
-  shadowUrl: "/leaflet/marker-shadow.png",
+  iconRetinaUrl: '/leaflet/marker-icon-2x.png',
+  iconUrl: '/leaflet/marker-icon.png',
+  shadowUrl: '/leaflet/marker-shadow.png',
 });
 
 function FlyTo({ vessel }: { vessel: Vessel | null }) {
@@ -47,6 +47,8 @@ export default function LeafletMapClient({
             Longitude: {activeVessel.lng}
             <br />
             Speed&nbsp;&nbsp;&nbsp;: {activeVessel.speed} knots
+            <br />
+            Heading : {activeVessel.heading}°
           </Popup>
         </Marker>
       )}
