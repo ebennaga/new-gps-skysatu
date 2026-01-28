@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 :root {
   --background: #ffffff;
@@ -19,8 +20,140 @@
   }
 }
 
-body {
+/* body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  height: 50px;
+  background: #eef1f5;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  justify-content: space-between;
+}
+
+.header nav a {
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ccc;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+.tabs button {
+  width: 50%;
+  padding: 6px;
+}
+
+.tabs .active {
+  background: #2ecc71;
+  color: white;
+}
+
+.filter {
+  display: flex;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.group {
+  background: #0f766e;
+  color: white;
+  padding: 4px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.map {
+  flex: 1;
+}
+
+/* styles/sidebar.css */
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.tabs {
+  display: flex;
+}
+.tabs span {
+  flex: 1;
+  padding: 6px;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+.tabs .active {
+  background: #1fbf75;
+  color: #fff;
+}
+
+.date-picker {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+}
+.date-picker input {
+  width: 110px;
+}
+.date-picker button {
+  padding: 2px 6px;
+}
+
+.company {
+  background: #1fbf75;
+  color: #000;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.vessel {
+  border-top: 1px solid #ccc;
+}
+.vessel.checked {
+  background: #ffcc33;
+}
+
+.vessel label {
+  display: block;
+  padding: 4px;
+}
+
+.history {
+  background: #fff;
+  padding: 4px;
+}
+
+.history-row {
+  padding: 2px 0;
+  border-bottom: 1px solid #eee;
 }
