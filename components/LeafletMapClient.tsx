@@ -36,6 +36,13 @@ export default function LeafletMapClient({
   const hasValidPosition =
     activeVessel && activeVessel.lat !== null && activeVessel.lng !== null;
 
+  const shipIcon = new L.Icon({
+    iconUrl: "/leaflet/kapal-go-orange.png",
+    iconSize: [10, 20], // ukuran icon
+    iconAnchor: [20, 20], // titik tengah icon
+    popupAnchor: [-12, -20], // posisi popup
+  });
+
   return (
     <MapContainer center={[-2, 118]} zoom={5} className="map">
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -44,7 +51,10 @@ export default function LeafletMapClient({
 
       {/* 👇 Render marker hanya jika posisi valid */}
       {hasValidPosition && (
-        <Marker position={[activeVessel.lat!, activeVessel.lng!]}>
+        <Marker
+          position={[activeVessel.lat!, activeVessel.lng!]}
+          icon={shipIcon}
+        >
           <Popup>
             <strong>{activeVessel.name}</strong>
             <br />
@@ -54,7 +64,7 @@ export default function LeafletMapClient({
             <br />
             Speed&nbsp;&nbsp;&nbsp;: {activeVessel.speed ?? "N/A"} knots
             <br />
-            Heading : {activeVessel.heading ?? "N/A"}°
+            Heading3 : {activeVessel.heading ?? "N/A"}°
           </Popup>
         </Marker>
       )}
