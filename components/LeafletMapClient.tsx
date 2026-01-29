@@ -64,7 +64,7 @@ export default function LeafletMapClient({
             <br />
             Speed&nbsp;&nbsp;&nbsp;: {activeVessel.speed ?? "N/A"} knots
             <br />
-            Heading3 : {activeVessel.heading ?? "N/A"}°
+            Heading : {activeVessel.heading ?? "N/A"}°
           </Popup>
         </Marker>
       )}
