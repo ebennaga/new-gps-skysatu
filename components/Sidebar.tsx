@@ -4988,6 +4988,57 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
   };
   const filteredHistory = getFilteredHistory();
 
+  // Fungsi untuk download CSV
+  const downloadCSV = () => {
+    const data = filteredHistory;
+
+    if (data.length === 0) {
+      alert("Tidak ada data untuk didownload");
+      return;
+    }
+
+    // Header CSV
+    const headers = [
+      "Date",
+      "Time",
+      "Speed (Knots)",
+      "Latitude",
+      "Longitude",
+      "Heading",
+    ];
+
+    // Konversi data ke format CSV
+    const csvContent = [
+      headers.join(","),
+      ...data.map((item) =>
+        [
+          item.date,
+          item.time,
+          item.speed,
+          item.lat,
+          item.lng,
+          item.heading,
+        ].join(","),
+      ),
+    ].join("\n");
+
+    // Buat Blob dan download
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `marina_express_history_${fromDate}_to_${toDate}.csv`,
+    );
+    link.style.visibility = "hidden";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const toggleVessel = (vesselName: string) => {
     setExpandedVessel(expandedVessel === vesselName ? null : vesselName);
   };
@@ -5011,7 +5062,9 @@ export default function Sidebar({ onSelectVessel }: SidebarProps) {
           onChange={(e) => setToDate(e.target.value)}
         />
         <button onClick={() => setShowHistory(true)}>🔍 Search</button>
-        <button className="download-btn">⬇</button>
+        <button className="download-btn" onClick={downloadCSV}>
+          Download CSV
+        </button>
       </div>
 
       {/* Manager BUMI Section */}
